@@ -1,0 +1,8 @@
+<p-messages 
+  *ngIf="isAlertOpen"
+   [(value)]="msgs1"
+   [enableService]="false"
+   (onHide)="changeAlertStatus()"
+>
+</p-messages>
+

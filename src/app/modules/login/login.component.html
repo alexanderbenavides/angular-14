@@ -1,0 +1,33 @@
+<section class="d-flex align-items-center justify-content-center">
+    <form [formGroup]="formLogin" (ngSubmit)="login()">
+        <div class="row mt-4 text-center">
+            <div class="col-12">
+                <img class="logo" [src]="logo" alt="logo">
+            </div>
+            <div class="col-12">
+                <input 
+                 type="text" 
+                 pInputText
+                 formControlName="username"
+                 placeholder="Usuario"
+                />
+            </div>
+            <div class="col-12 mt-2">
+                <input 
+                  type="password" 
+                  pPassword
+                  formControlName="password"
+                  [feedback]="false"
+                  placeholder="Contraseña"
+                />
+            </div>
+            <div class="col-12 mt-4">
+                <button pButton type="button" label="iniciar Sesion" (click)="login()"></button>
+            </div>
+        </div>
+    </form>
+</section>
+<app-alert
+ [open]="openAlert"
+ (closeAlert)="openAlert = false"
+></app-alert>
